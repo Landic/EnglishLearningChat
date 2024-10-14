@@ -31,6 +31,15 @@
   </servlet-mapping>
 
   <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>itstep.learning.servlets.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/api/register/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
     <servlet-name>FileUploadServlet</servlet-name>
     <servlet-class>itstep.learning.servlets.FileUploadServlet</servlet-class>
   </servlet>
