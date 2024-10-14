@@ -1,12 +1,11 @@
 package itstep.learning.servlets;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 public class AuthServlet extends HttpServlet {
     private static final String SECRET_KEY = "13082004";
@@ -23,15 +22,15 @@ public class AuthServlet extends HttpServlet {
     @Override protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username"), password = request.getParameter("password");
 
-        if ("admin".equals(username) && "password".equals(password)) {
-            String token = Jwts.builder().setSubject(username).setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + 864_000_00))
-                .signWith(SignatureAlgorithm.HS256, SECRET_KEY).compact();
-            response.setHeader("Authorization", "Bearer " + token);
-            response.getWriter().write("Вход успешен!");
+        Map<String, String> users = new HashMap<>();
+        users.put("admin", "password");
+
+        if (users.containsKey(username)) {
+            response.setStatus(HttpServletResponse.SC_CONFLICT);
+            response.getWriter().write("Пользователь уже существует!");
         } else {
-            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-            response.getWriter().write("Недействительные учетные данные!");
+            users.put(username, password);
+            response.getWriter().write("Регистрация успешна для пользователя: " + username);
         }
     }
     @Override protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
