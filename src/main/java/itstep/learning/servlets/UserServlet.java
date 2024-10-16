@@ -1,6 +1,6 @@
 package itstep.learning.servlets;
 import itstep.learning.dao.ContentDao;
-import itstep.learning.entities.TextContent;
+import itstep.learning.entities.MainContent;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -12,7 +12,7 @@ public class UserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ContentDao contentDao = new ContentDao();
-        List<TextContent> texts = contentDao.getAllTexts();
+        List<MainContent> texts = contentDao.getAllMainContent();
         response.getWriter().write(texts.toString());
     }
     @Override protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bef4c6d5-688c-471a-8ddf-0717d6801fbc" name="Changes" comment="Добавил в проект регистрацию пользователей">
-      <change afterPath="$PROJECT_DIR$/src/main/java/itstep/learning/dao/ContentDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/itstep/learning/entities/TextContent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+    <list default="true" id="bef4c6d5-688c-471a-8ddf-0717d6801fbc" name="Changes" comment="Добавил в проект таблицы основного контента, еще тестовая версия!">
+      <change afterPath="$PROJECT_DIR$/src/main/java/itstep/learning/entities/MainContent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/itstep/learning/servlets/MainContentServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/itstep/learning/dao/ContentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itstep/learning/dao/ContentDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/itstep/learning/servlets/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itstep/learning/servlets/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +90,8 @@
       <workItem from="1728813996704" duration="3290000" />
       <workItem from="1728896670189" duration="606000" />
       <workItem from="1728984221472" duration="727000" />
+      <workItem from="1728984960176" duration="62000" />
+      <workItem from="1729081947819" duration="821000" />
     </task>
     <task id="LOCAL-00001" summary="Добавил в проект: Rest, FormParseService, StorageService, Аутентификацию с выдачей токенов на день.">
       <option name="closed" value="true" />
@@ -106,7 +109,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728897269229</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Добавил в проект таблицы основного контента, еще тестовая версия!">
+      <option name="closed" value="true" />
+      <created>1728985014535</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1728985014535</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +138,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Добавил в проект: Rest, FormParseService, StorageService, Аутентификацию с выдачей токенов на день." />
     <MESSAGE value="Добавил в проект регистрацию пользователей" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил в проект регистрацию пользователей" />
+    <MESSAGE value="Добавил в проект таблицы основного контента, еще тестовая версия!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил в проект таблицы основного контента, еще тестовая версия!" />
   </component>
 </project>
