@@ -13,6 +13,15 @@
   </filter-mapping>
 
   <servlet>
+    <servlet-name>MainContentServlet</servlet-name>
+    <servlet-class>itstep.learning.servlets.MainContentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MainContentServlet</servlet-name>
+    <url-pattern>/api/content/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
     <servlet-name>UserServlet</servlet-name>
     <servlet-class>itstep.learning.servlets.UserServlet</servlet-class>
   </servlet>
