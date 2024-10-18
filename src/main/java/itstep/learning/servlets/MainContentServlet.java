@@ -1,6 +1,7 @@
 package itstep.learning.servlets;
 import itstep.learning.dao.ContentDao;
 import itstep.learning.entities.MainContent;
+import javax.persistence.NoResultException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -13,8 +14,26 @@ public class MainContentServlet extends HttpServlet {
     private final ContentDao contentDao = new ContentDao();
 
     @Override protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<MainContent> mainContents = contentDao.getAllMainContent();
-        response.getWriter().write(mainContents.toString());
+        String slug = request.getParameter("slug");
+        if (slug != null && !slug.isEmpty()) {
+            try {
+                MainContent content = contentDao.findBySlug(slug);
+                if (content != null) {
+                    response.setContentType("application/json");
+                    response.getWriter().write(content.toString());
+                } else {
+                    response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+                    response.getWriter().write("Content not found");
+                }
+            } catch (NoResultException e) {
+                response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+                response.getWriter().write("Content not found");
+            }
+        } else {
+            List<MainContent> mainContents = contentDao.getAllMainContent();
+            response.setContentType("application/json");
+            response.getWriter().write(mainContents.toString());
+        }
     }
     @Override
     @Transactional

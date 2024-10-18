@@ -4,6 +4,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "main_content")
 public class MainContent {
+    private String slug;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -12,6 +13,11 @@ public class MainContent {
     @Column(length = 5000)
     private String description;
 
+    public void generateSlug() {
+        this.slug = this.title.toLowerCase().replaceAll("[^a-z0-9]+", "-").replaceAll("^-|-$", "");
+    }
+    public String getSlug() { return slug; }
+    public void setSlug(String slug) { this.slug = slug; }
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
     public String getTitle() { return title; }
