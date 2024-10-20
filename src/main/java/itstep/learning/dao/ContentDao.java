@@ -20,4 +20,7 @@ public class ContentDao {
         MainContent mainContent = entityManager.find(MainContent.class, id);
         if (mainContent != null) entityManager.remove(mainContent);
     }
+    public MainContent findBySlug(String slug) {
+        return entityManager.createQuery("SELECT c FROM MainContent c WHERE c.slug = :slug", MainContent.class).setParameter("slug", slug).getSingleResult();
+    }
 }
