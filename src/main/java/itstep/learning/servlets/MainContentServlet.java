@@ -1,7 +1,11 @@
 package itstep.learning.servlets;
 import itstep.learning.dao.ContentDao;
 import itstep.learning.entities.MainContent;
+import itstep.learning.services.SimilarContentService;
+import org.jetbrains.annotations.NotNull;
+
 import javax.persistence.NoResultException;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -13,7 +17,7 @@ import java.util.List;
 public class MainContentServlet extends HttpServlet {
     private final ContentDao contentDao = new ContentDao();
 
-    @Override protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    @Override protected void doGet(@NotNull HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String slug = request.getParameter("slug");
         if (slug != null && !slug.isEmpty()) {
             try {
@@ -34,6 +38,16 @@ public class MainContentServlet extends HttpServlet {
             response.setContentType("application/json");
             response.getWriter().write(mainContents.toString());
         }
+
+        int contentId = Integer.parseInt(request.getParameter("id"));
+        MainContent content = contentDao.findById(contentId);
+
+        SimilarContentService similarContentService = new SimilarContentService();
+        List<MainContent> similarContent = similarContentService.getSimilarContent(content);
+        request.setAttribute("similarContent", similarContent);
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/content.jsp");
+        dispatcher.forward(request, response);
     }
     @Override
     @Transactional

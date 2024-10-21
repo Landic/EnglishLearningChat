@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bef4c6d5-688c-471a-8ddf-0717d6801fbc" name="Changes" comment="Добавил в проект API основного контента.">
+    <list default="true" id="bef4c6d5-688c-471a-8ddf-0717d6801fbc" name="Changes" comment="Добавил в проект слагификацию.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/itstep/learning/services/SimilarContentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/content.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/itstep/learning/dao/ContentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itstep/learning/dao/ContentDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/itstep/learning/entities/MainContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itstep/learning/entities/MainContent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/itstep/learning/servlets/MainContentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itstep/learning/servlets/MainContentServlet.java" afterDir="false" />
@@ -18,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -89,7 +92,8 @@
       <workItem from="1728984221472" duration="727000" />
       <workItem from="1728984960176" duration="62000" />
       <workItem from="1729081947819" duration="918000" />
-      <workItem from="1729234289543" duration="544000" />
+      <workItem from="1729234289543" duration="628000" />
+      <workItem from="1729503148720" duration="1556000" />
     </task>
     <task id="LOCAL-00001" summary="Добавил в проект: Rest, FormParseService, StorageService, Аутентификацию с выдачей токенов на день.">
       <option name="closed" value="true" />
@@ -123,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729082822499</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Добавил в проект слагификацию.">
+      <option name="closed" value="true" />
+      <created>1729234860198</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1729234860198</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +158,7 @@
     <MESSAGE value="Добавил в проект регистрацию пользователей" />
     <MESSAGE value="Добавил в проект таблицы основного контента, еще тестовая версия!" />
     <MESSAGE value="Добавил в проект API основного контента." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил в проект API основного контента." />
+    <MESSAGE value="Добавил в проект слагификацию." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил в проект слагификацию." />
   </component>
 </project>
