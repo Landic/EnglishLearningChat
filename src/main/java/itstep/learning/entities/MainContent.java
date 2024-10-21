@@ -8,10 +8,9 @@ public class MainContent {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false)
-    private String title;
-    @Column(length = 5000)
-    private String description;
+    @Column(nullable = false) private String title;
+    @Column(length = 5000) private String description;
+    @Column(nullable = false) private String category;
 
     public void generateSlug() {
         this.slug = this.title.toLowerCase().replaceAll("[^a-z0-9]+", "-").replaceAll("^-|-$", "");
@@ -24,4 +23,6 @@ public class MainContent {
     public void setTitle(String title) { this.title = title; }
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
+    public String getCategory() { return category; }
+    public void setCategory(String category) { this.category = category; }
 }
