@@ -22,7 +22,9 @@ public class MainContentServlet extends HttpServlet {
         if (slug != null && !slug.isEmpty()) {
             try {
                 MainContent content = contentDao.findBySlug(slug);
+
                 if (content != null) {
+                    request.setAttribute("content", content);
                     response.setContentType("application/json");
                     response.getWriter().write(content.toString());
                 } else {
@@ -45,6 +47,7 @@ public class MainContentServlet extends HttpServlet {
         SimilarContentService similarContentService = new SimilarContentService();
         List<MainContent> similarContent = similarContentService.getSimilarContent(content);
         request.setAttribute("similarContent", similarContent);
+        request.setAttribute("content", content);
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("/content.jsp");
         dispatcher.forward(request, response);
