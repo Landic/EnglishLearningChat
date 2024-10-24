@@ -13,4 +13,15 @@ public class OrderDao {
     public OrderContent findById(Long id) {
         return entityManager.find(OrderContent.class, id);
     }
+    public boolean updateOrder(OrderContent orderContent) {
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.merge(orderContent);
+            entityManager.getTransaction().commit();
+            return true;
+        } catch (Exception e) {
+            entityManager.getTransaction().rollback();
+            return false;
+        }
+    }
 }
