@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bef4c6d5-688c-471a-8ddf-0717d6801fbc" name="Changes" comment="Добавил в проект similarity контент.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/itstep/learning/dao/OrderDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/itstep/learning/entities/OrderContent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/itstep/learning/servlets/OrderServlet.kt" afterDir="false" />
+    <list default="true" id="bef4c6d5-688c-471a-8ddf-0717d6801fbc" name="Changes" comment="Добавил в проект заказы. Тестовый функционал.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/itstep/learning/servlets/MainContentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itstep/learning/servlets/MainContentServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/itstep/learning/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itstep/learning/dao/OrderDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/itstep/learning/entities/OrderContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itstep/learning/entities/OrderContent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/itstep/learning/servlets/OrderServlet.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/itstep/learning/servlets/OrderServlet.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/content.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/content.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +96,8 @@
       <workItem from="1729234289543" duration="628000" />
       <workItem from="1729503148720" duration="1647000" />
       <workItem from="1729587951705" duration="301000" />
-      <workItem from="1729588322635" duration="1160000" />
+      <workItem from="1729588322635" duration="1231000" />
+      <workItem from="1729752335729" duration="305000" />
     </task>
     <task id="LOCAL-00001" summary="Добавил в проект: Rest, FormParseService, StorageService, Аутентификацию с выдачей токенов на день.">
       <option name="closed" value="true" />
@@ -149,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729504765052</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Добавил в проект заказы. Тестовый функционал.">
+      <option name="closed" value="true" />
+      <created>1729589543156</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1729589543156</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,6 +180,7 @@
     <MESSAGE value="Добавил в проект API основного контента." />
     <MESSAGE value="Добавил в проект слагификацию." />
     <MESSAGE value="Добавил в проект similarity контент." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил в проект similarity контент." />
+    <MESSAGE value="Добавил в проект заказы. Тестовый функционал." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил в проект заказы. Тестовый функционал." />
   </component>
 </project>
