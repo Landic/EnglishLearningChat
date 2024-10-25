@@ -24,4 +24,8 @@ public class OrderDao {
             return false;
         }
     }
+    @Transactional public void deleteOrder(Long id) {
+        OrderContent order = entityManager.find(OrderContent.class, id);
+        if (order != null) entityManager.remove(order);
+    }
 }
