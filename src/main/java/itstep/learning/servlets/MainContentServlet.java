@@ -3,7 +3,6 @@ import itstep.learning.dao.ContentDao;
 import itstep.learning.entities.MainContent;
 import itstep.learning.services.SimilarContentService;
 import org.jetbrains.annotations.NotNull;
-
 import javax.persistence.NoResultException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

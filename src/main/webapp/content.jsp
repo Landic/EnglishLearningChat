@@ -14,6 +14,10 @@
 		<label><input type="text" name="newDetails" value="${order.details}"></label>
 		<button type="submit">Обновить</button>
 </form>
+<form action="order/delete" method="post">
+	<input type="hidden" name="orderId" value="${order.id}">
+	<button type="submit" onclick="return confirm('Вы уверены, что хотите удалить заказ?')">Удалить</button>
+</form>
 <h2>Вас также может заинтересовать:</h2>
 <ul>
 	<% List<MainContent> similarContent = (List<MainContent>) request.getAttribute("similarContent"); %>
