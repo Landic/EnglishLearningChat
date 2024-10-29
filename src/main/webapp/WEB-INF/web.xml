@@ -65,4 +65,22 @@
     <servlet-name>OrderServlet</servlet-name>
     <url-pattern>/api/order</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UserProfileServlet</servlet-name>
+    <servlet-class>itstep.learning.servlets.UserProfileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserProfileServlet</servlet-name>
+    <url-pattern>/profile</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>OrderHistoryServlet</servlet-name>
+    <servlet-class>itstep.learning.servlets.OrderHistoryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrderHistoryServlet</servlet-name>
+    <url-pattern>/order-history</url-pattern>
+  </servlet-mapping>
 </web-app>
